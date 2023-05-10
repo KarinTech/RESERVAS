@@ -36,7 +36,8 @@ form label{
 
 form input[type="text"],
 form input[type="email"]{
- max-width:70%;
+    
+ max-width:90%;
  padding:3px 10px;
  border:1px solid #160401;
  border-radius:3px;
