@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>reservasdelChef</title>
+    <title>reservasSensazione</title>
     <link rel="stylesheet" href="reservas.css">
 </head>
 <body>
 <div class="contenedor">
     <div class="wrap">
-      <h3>Reservad tu Cena en Del Chef</h3>
+      <h3>Reservad tu Cena en <span> Sensazione</span></h3>
       <div class="forms_wrap-2">
   
       <div class="form-header-primary">
@@ -31,7 +31,7 @@
               
   <div class="frm-row">
   <div class="section colm colm6">
-    <label for="guestemail" class="field-label">Email</label>
+    <label for="guestemail" class="field-label" id="">Email</label>
     <label for="guestemail" class="field prepend-icon">
       <input type="email" name="guestemail" id="guestemail" class="gui-input" required="" placeholder="john@something.com">
       <span class="field-icon"><i class="fa fa-envelope"></i></span>  
@@ -118,10 +118,26 @@
     </div>
       </div>
       <div class="form-footer">
-        <button type="submit" class="button btn-primary">Confirmar Reservas</button>
+       
         <button type="reset" class="button">Cancelar</button>
       </div>
-      
+      <a href="#guestemail" onclick="enviarCorreo('Su reserva fue hecha con exito')">Clique para confirmar los datos</a>	
+
+	<script>
+	/**
+	 * Método que envía un e-mail a través del cliente que tenga por defecto
+	 *@param  {String} insTextoComp Texto que aparecerá dentro del mensaje
+	 */
+	function enviarCorreo(insTextoComp) {
+		var sEmail = prompt("Gracias por Tu Reserva! Te enviamos un email de confirmación. ", "");
+		if(sEmail != null) {
+			var sLink = "mailto:" + escape(sEmail)
+			 + "?subject=" + escape("Te han compartirdo el siguente texto")
+			 + "&body=" + insTextoComp;
+			window.location.href = sLink;
+		}
+	}
+	</script>
     </form>
   </div>
     

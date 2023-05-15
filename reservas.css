@@ -14,6 +14,10 @@ h3 {
     color:antiquewhite;
 }
 
+h3 span {
+    font-style: italic;
+    font-size: large;
+}
 .forms_wrap-2 {
     box-sizing: border-box;
     justify-self: flex-start;
@@ -63,6 +67,15 @@ form input[type="submit"]:hover{
  cursor:pointer;
 }
 
+form a {
+    text-decoration: none;
+
+
+}
+    
+form a :hover {
+    color:#160401;
+}
 textarea{
  width:70%;
  height:100px;
