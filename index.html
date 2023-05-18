@@ -121,22 +121,19 @@
        
         <button type="reset" class="button">Cancelar</button>
       </div>
-      <a href="#guestemail" onclick="enviarCorreo('Su reserva fue hecha con exito')">Clique para confirmar los datos</a>	
+      <a href="#guestemail" onclick="msgeConfirmation('Su reserva fue hecha con exito')">Clique para confirmar los datos</a>	
 
 	<script>
 	/**
 	 * Método que envía un e-mail a través del cliente que tenga por defecto
 	 *@param  {String} insTextoComp Texto que aparecerá dentro del mensaje
 	 */
-	function enviarCorreo(insTextoComp) {
-		var sEmail = prompt("Gracias por Tu Reserva! Te enviamos un email de confirmación. ", "");
-		if(sEmail != null) {
-			var sLink = "mailto:" + escape(sEmail)
-			 + "?subject=" + escape("Te han compartirdo el siguente texto")
-			 + "&body=" + insTextoComp;
-			window.location.href = sLink;
+	function msgeConfirmacion() {
+		 email = prompt("Gracias por Tu Reserva! Te enviamos un email de confirmación.");
+		
+		
 		}
-	}
+	
 	</script>
     </form>
   </div>
