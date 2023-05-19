@@ -30,3 +30,4 @@ function validacion(e) {
        window.alert('Ingresa correctamente tus datos')
     }
 }
+
