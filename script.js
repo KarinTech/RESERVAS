@@ -30,4 +30,7 @@ function validacion(e) {
        window.alert('Ingresa correctamente tus datos')
     }
 }
+document.getElementById('botonS').onclick = function(){
+    alert('Tu Reserva ha sido exitosa!');
+}
 
